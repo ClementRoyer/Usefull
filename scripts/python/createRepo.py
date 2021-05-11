@@ -34,6 +34,7 @@ from utils import ask
 
 class Repository:
     name = "",
+    path = "",
     description = "",
     public = True,
 
@@ -42,14 +43,15 @@ class User:
     token = "",
     g = ""
 
-
 def load_args(r):
     argparser = argparse.ArgumentParser(sys.argv[0], "Create and init github repository.")
+    argparser.add_argument("--path", default="./", help="Current position path")
     argparser.add_argument("--name", "-n", default="", help="Repository name")
     argparser.add_argument("--description", "-d", default="", help="Repository description")
     argparser.add_argument("--private", "-p", action="store_true", default=False, help="Create private repository")
     argparser.add_argument("--public", action="store_true", default=False, help="Create public repository")
     args = argparser.parse_args()
+    r.path = args.path
     r.name = args.name
     r.description = args.description
     r.public = args.private
@@ -61,7 +63,7 @@ def input_cli(r):
         r.description = ask("🤖 Repo description:\n-> ")
 
 def load_env(r):
-    config = dotenv_values(".env")
+    config = dotenv_values()
     user = User()
     user.token = config['github_token']
     user.g = Github(user.token)
@@ -80,7 +82,7 @@ def create_repo(user, repo):
         sys.exit(84)
     print(f'✔ {repository.name} created.')
     r = r.json();
-    git.Git().clone(r['ssh_url']);
+    git.Git(repo.path).clone(r['ssh_url']);
     print(f'✔ Clone: Done')
 
 def init_repo(user, repo):
