@@ -8,20 +8,22 @@
   <br>
 </h1>
 
-<h4 align="center">My small description.</h4>
+<h4 align="center">{{description}}</h4>
 
-<div align="center"><sub> Version <a href="tag">ALPHA</a></sub></div>
 
 <br>
 
 <div align="center">
 
-[![0](https://img.shields.io/badge/Home-black.svg?style=flat&logo=Markdown&logoColor=white&labelColor=black&color=black)][Main-Readme] [![0](https://img.shields.io/badge/Documentation-black.svg?style=flat&logo=Postman&logoColor=FF6C37&labelColor=black&color=black)][Postman-Doc] [![0](https://img.shields.io/badge/Changelog-black.svg?style=flat&logo=MarkDown&labelColor=black&color=black)][ChangeLog] <!--[![Actions Status](https://github.com/ClementRoyer/{{repo}}/workflows/{workflow_name}/badge.svg)](https://github.com/ClementRoyer/{{repo}}/actions) -->
+[![changelog][changelog-img]][changelog] &nbsp; [![Documentation][documentation-img]][documentation] &nbsp; [![License][license-img]][license] &nbsp; [![Profile][profile-img]][profile]
+
+<div align="center"><sub> Version <a href="tag">ALPHA</a></sub></div>
+<br>
 
 <!-- TOC -->
 <p align="center">
-  <a href="#table">Table</a> •
-  <a href="#proof">Proof</a>
+  <a href="#Install">Install</a>
+  <!-- • <a href="#proof">Proof</a> -->
 </p>
 
 <!-- omit in toc -->
@@ -30,29 +32,17 @@
 </div>
 
 
-## Table
+## Install
 
-Interesting stuff here
+1) `git clone git@github.com:ClementRoyer/{{repo}}.git`
+2) `cd {{repo}}`
+3) ....................
 
-``` python
-print("Hello world")
-```
 
 <details>
-<summary>annoying stuff here</summary>
+<summary>Details</summary>
 </details>
 
-
-### of
-
-
-#### content
-
-## Proof
-
-### of
-
-#### concept
 
 
 
@@ -70,19 +60,22 @@ print("Hello world")
 
 <br><br>
 
-[![0](https://img.shields.io/badge/Usage_Policy-black.svg?style=flat&logo=Markdown&logoColor=white&labelColor=black&color=black)][Policy]  [![0](https://img.shields.io/badge/ciemrnt-black.svg?style=flat&logo=Twitter&labelColor=black&color=black)][twitter] [![0](https://img.shields.io/badge/Clément_royer-black.svg?style=flat&logo=Linkedin&labelColor=black&color=black)][Linkedin] 
+[![0](https://img.shields.io/badge/Usage_Policy-black.svg?style=flat&logo=Markdown&logoColor=white&labelColor=black&color=black)][license] [![0](https://img.shields.io/badge/Clément_royer-black.svg?style=flat&logo=Linkedin&labelColor=black&color=black)][Linkedin] ![visitors](https://visitor-badge.glitch.me/badge?page_id=clementroyer_{{repo}})
 </div>
 
 <!-- omit in toc -->
 # 
 
-![0](https://img.shields.io/badge/Author(s):-black.svg?style=flat&logoColor=white&labelColor=gray&color=gray) ![0](https://img.shields.io/badge/Clément_ROYER-black.svg?style=flat&logoColor=white&labelColor=black&color=black)
-
-
 <!-- links -->
-[Main-Readme]: .
-[Policy]: ./LICENSE
-[Postman-Doc]: .
-[ChangeLog]: ./changelog
-[Twitter]: https://www.twitter.com/ciemrnt
-[Linkedin]: https://www.linkedin.com/in/cl%C3%A9ment-royer/
+[linkedin]: https://www.linkedin.com/in/cl%C3%A9ment-royer/
+[license]: ./LICENSE
+[changelog]: ./changelog
+[documentation]: .
+[profile]: https://github.com/ClementRoyer
+
+
+<!-- Images -->
+[changelog-img]: https://img.shields.io/badge/Changelog-black.svg?&style=for-the-badge&logo=Markdown&logoColor=white
+[profile-img]: https://img.shields.io/badge/my_profile-black.svg?&style=for-the-badge&logo=github&logoColor=white
+[license-img]: https://img.shields.io/badge/license-black.svg?&style=for-the-badge&logo=Markdown&logoColor=white
+[documentation-img]: https://img.shields.io/badge/documentation-black.svg?&style=for-the-badge&logo=mail.ru&logoColor=white
